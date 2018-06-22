@@ -1,0 +1,20 @@
+betty:
+  boss:
+    count: 1
+  worker:
+    count: 16
+  server:
+    http:
+        port: 8080
+    transfer:
+      type: http
+#      type: websocket
+#      maxContentLength:
+#      websocket:
+#        path:
+#        subProtocol:
+#        allowExtensions:
+    log:
+      level:
+        pipeline: DEBUG
+#      type: tcp

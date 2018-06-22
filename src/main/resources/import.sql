@@ -1,0 +1,6 @@
+--insert into taxi_info (id,name) values(1,'1111');
+--insert into taxi_info (id,name) values(2,'2222');
+--insert into taxi_info (id,name) values(3,'3333');
+--insert into Driver (id, team_id, name, num, position) values(1,1,'1111', 10, 'Forward');
+--insert into Driver (id, team_id, name, num, position) values(2,1,'2222', 8, 'Midfielder');
+--insert into Driver (id, team_id, name, num, position) values(3,1,'3333', 3, 'Defender');

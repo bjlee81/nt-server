@@ -1,0 +1,56 @@
+spring:
+  main:
+    web-application-type: none
+  profiles:
+#    include: 'betty'
+  kafka:
+    consumer:
+      group-id: foo
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    bootstrap-servers: 127.0.0.1:9092
+    admin:
+      client-id:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/mydatabase
+      # grid-fs-database 는 mongodb 에서 document(row) 당 16MB 로 제한되어 있는
+      # 제한사항을 보완하기 위해 분할저장을 지원하기 위한 것 girdFS
+#      grid-fs-database: images
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#  datasource:
+#    hikari:
+#      driver-class-name: org.hsqldb.jdbc.JDBCDriver
+#      jdbc-url: jdbc:hsqldb:mem:.
+#      username: SA
+#      password: 1
+
+kafka:
+  topic:
+    tims: tims.t
+    boot: boot.t
+
+lombok:
+  log:
+    fieldName: logger
+
+logging:
+  level:
+    org.springframework: INFO
+    tims.mobile.collct.webapp: INFO
+    tims.mobile.collct.netty: INFO
+    org.hibernate.SQL: DEBUG
+    io.netty: INFO
+  file:
+    max-size: 20
+    max-history: 90
+  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n"
